@@ -13,14 +13,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Staatliches"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"
-        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <GlobalContext.Provider value={global}>
         <Component {...pageProps} />

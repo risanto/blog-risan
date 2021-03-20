@@ -9,7 +9,7 @@ const articles = (props) => {
 
     return (
         <section className="mx-3 my-4">
-            <div>
+            <div className="lg:w-1/2">
                 {leftArticles.map((article, i) => {
                     return (
                         <Card article={article} key={`article__left__${article.slug}`} />

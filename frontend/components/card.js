@@ -14,7 +14,7 @@ const card = (props) => {
                         <Image image={article.image} />
                     </div>
                     <div className="">
-                        <div className="flex mt-2 overflow-x-scroll">
+                        <div className="flex mt-2 overflow-x-auto">
                             <div className="inline-block py-1 mr-1 text-sm rounded place-self-center">{article.language.name} •
                             </div>
                             {article.categories.map((category, idx) => {
