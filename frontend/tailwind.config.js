@@ -13,9 +13,14 @@ module.exports = {
       padding: '1rem'
     },
     borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      'md': '0.375rem',
       lg: '0.75rem',
       xl: '1.25rem',
-      '2xl': '2.5rem'
+      '2xl': '2.5rem',
+      'full': '9999px',
     },
     backgroundColor: theme => ({
       ...theme('colors'),
