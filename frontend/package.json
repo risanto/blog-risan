@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "github-markdown-css": "^4.0.0",
     "moment": "^2.29.1",
     "next": "10.0.8",
     "popper.js": "1.15.0",
