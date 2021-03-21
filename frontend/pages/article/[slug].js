@@ -17,7 +17,7 @@ const Article = ({ article }) => {
     return (
         <Layout>
             <Seo seo={seo} />
-            <div className="p-6">
+            <main className="p-6 dark:bg-black dark:text-white">
                 <section>
                     <h1 className="text-2xl font-heading">{article.title}</h1>
                     <span
@@ -40,7 +40,7 @@ const Article = ({ article }) => {
                 <section className="markdown-body">
                     {article.content}
                 </section>
-            </div>
+            </main>
         </Layout>
     )
 };
