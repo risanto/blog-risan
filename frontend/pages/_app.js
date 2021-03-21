@@ -11,14 +11,14 @@ const MyApp = ({ Component, pageProps }) => {
   const { global } = pageProps
 
   return (
-    <>
+    <div className="dark:bg-black">
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
       </Head>
       <GlobalContext.Provider value={global}>
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       </GlobalContext.Provider>
-    </>
+    </div>
   )
 }
 

@@ -5,7 +5,7 @@ const Nav = (props) => {
     const [colorTheme, setTheme] = useDarkMode()
     
     return (
-        <nav className="static top-0 flex p-2 dark:bg-black">
+        <nav className="sticky top-0 flex p-2 dark:bg-black">
             <button
                 onClick={() => setTheme(colorTheme)}
                 className="place-self-center focus:outline-none"

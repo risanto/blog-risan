@@ -3,6 +3,7 @@ import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
+import Markdown from 'markdown-to-jsx'
 
 const Article = ({ article }) => {
     const imageUrl = getStrapiMedia(article.image)
@@ -17,7 +18,7 @@ const Article = ({ article }) => {
     return (
         <Layout>
             <Seo seo={seo} />
-            <main className="p-6 dark:bg-black dark:text-white">
+            <main className="p-6 mx-auto dark:bg-black dark:text-white lg:max-w-3xl">
                 <section>
                     <h1 className="text-2xl font-heading">{article.title}</h1>
                     <span
@@ -37,8 +38,35 @@ const Article = ({ article }) => {
                         src={imageUrl}
                     />
                 </section>
-                <section className="markdown-body">
-                    {article.content}
+                <section className="">
+                    <Markdown
+                    options={{
+                        overrides: {
+                            p: {
+                                props: {
+                                    className: 'mt-4'
+                                }
+                            },
+                            h6: {
+                                props: {
+                                    className: 'text-sm'
+                                }
+                            },
+                            ul: {
+                                props: {
+                                    className: 'list-disc pl-6'
+                                }
+                            },
+                            ol: {
+                                props: {
+                                    className: 'list-decimal pl-6'
+                                }
+                            }
+                        }
+                    }}
+                    >
+                        {article.content}
+                    </Markdown>
                 </section>
             </main>
         </Layout>
@@ -61,13 +89,13 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const articles = await fetchAPI(
         `/articles?slug=${params.slug}&status=published`
-    );
-    const categories = await fetchAPI("/categories");
+    )
+    const categories = await fetchAPI("/categories")
 
     return {
         props: { article: articles[0], categories },
         revalidate: 1,
-    };
+    }
 }
 
-export default Article;
+export default Article
