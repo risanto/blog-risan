@@ -5,10 +5,10 @@ const Nav = (props) => {
     const [colorTheme, setTheme] = useDarkMode()
     
     return (
-        <nav className="static top-0 p-2">
+        <nav className="static top-0 flex p-2 dark:bg-black">
             <button
                 onClick={() => setTheme(colorTheme)}
-                className="dark:bg-black focus:outline-none"
+                className="place-self-center focus:outline-none"
             >
                 <img
                     alt="dark mode"

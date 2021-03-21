@@ -10,11 +10,11 @@ const Home = ({ articles, categories, homepage, languages }) => {
   return (
     <Layout>
       <Seo seo={homepage.seo} />
-      <main className="">
-        <header className="flex flex-col justify-center px-3 mx-auto mt-4 bg-white align-center lg:w-2/3">
-          <h1 className="inline text-2xl text-center font-heading">Hey, I'm Risan</h1>
+      <main className="h-screen dark:bg-black">
+        <header className="flex flex-col justify-center px-3 py-4 mx-auto align-center lg:w-2/3">
+          <h1 className="inline text-2xl text-center font-heading dark:text-white">Hey, I'm Risan</h1>
           <p className="inline text-center">
-            <span className="center-if-single-line">
+            <span className="center-if-single-line dark:text-white">
               I'm a full stack developer who writes about web development and productivity.
             </span>
           </p>

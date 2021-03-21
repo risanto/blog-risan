@@ -4,11 +4,10 @@ import Image from './image'
 
 const card = (props) => {
     const { article } = props
-    console.log(article)
 
     return (
         <Link as={`/article/${article.slug}`} href="/article/[id]">
-            <a className="">
+            <a className="dark:text-white">
                 <div className="">
                     <div className="">
                         <Image image={article.image} />
