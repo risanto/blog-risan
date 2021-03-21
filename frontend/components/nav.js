@@ -12,14 +12,14 @@ const Nav = (props) => {
             >
                 <img
                     alt="dark mode"
-                    src="moon.svg"
+                    src="/moon.svg"
                     className="dark:hidden"
                     width="25"
                     height="25"
                 />
                 <img
                     alt="light mode"
-                    src="sun.svg"
+                    src="/sun.svg"
                     className="hidden dark:block"
                     width="25"
                     height="25"

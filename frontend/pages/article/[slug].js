@@ -1,10 +1,8 @@
-import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { getStrapiMedia } from "../../lib/media"
-import 'github-markdown-css'
 
 const Article = ({ article }) => {
     const imageUrl = getStrapiMedia(article.image)
@@ -40,7 +38,7 @@ const Article = ({ article }) => {
                     />
                 </section>
                 <section className="markdown-body">
-                    <ReactMarkdown source={article.content} escapeHtml={false} />
+                    {article.content}
                 </section>
             </div>
         </Layout>
